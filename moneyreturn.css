@@ -1,0 +1,143 @@
+.full-box{
+    width:70%;
+    margin-right:15%;
+    margin-left:15%;
+    justify-content: center !important;
+    /* border:1px solid pink; */
+    
+}
+div{
+    margin:0;
+    padding:0;
+}
+h1{
+    text-align: center;
+}
+.column{
+    width:100%;
+    display:flex;
+    /* border:3px solid rgb(174, 203, 25); */
+
+    
+}
+ul{
+    list-style: none;
+    margin-top: 0;
+    
+}
+.col-1{
+    width:25%;
+    line-height: 2;
+    margin-left:0;
+    text-align: left;
+    /* border:1px solid green; */
+
+}
+.col-2{
+    width:25%;
+    line-height: 2;
+    /* border:1px solid green; */
+
+
+
+}
+.col-3{
+    width:25%;
+    line-height: 2;
+    /* border:1px solid green; */
+
+
+
+}
+.col-4{
+    width:25%;
+    line-height: 2;
+    /* border:1px solid green; */
+
+
+
+}
+input{
+    width:100%;
+}
+legend{
+    text-align: center;
+}
+.bank-label{
+    /* margin:3.5%; */
+    padding-bottom: 5%;
+}
+select{
+    width:100%;
+    padding-right: 50%;
+    margin-right:5%;
+}
+.bank {
+    width:96%;
+}
+.account-deposite{
+    width:96%;
+}
+.bank-select{
+   
+   width:50%;
+    
+}
+.bank-cheque{
+    padding-top:2%;
+}
+.description{
+    
+    border: none;
+    line-height:2 !important;
+}
+.description label{
+    margin:2%;
+}
+.description input{
+    width:70%;
+    margin-left:3%;
+}
+.decimal{
+    text-align: right;
+}
+.amount-deposite input{
+    width:100%;
+}
+@media (max-width:760px) {
+    .full-box{
+        width:100%;
+        margin: 0;
+        padding: 0;
+        object-fit: cover;
+        /* flex-direction: column; */
+    }
+    .column{
+        /* flex-direction: column; */
+        width: 100%;
+        object-fit: cover;
+    }
+   
+    .col-1{
+        width:49%;
+    
+    }
+    .col-2{
+        width:49%;
+    }   
+    .col-3{
+        width:49%;
+    }
+    .col-4{
+        width:49%;
+    }
+    .bank{
+        width:96%;
+    }
+    .account-deposite{
+        width:96%;
+    }
+    .description{
+        width:100%;
+    }
+}

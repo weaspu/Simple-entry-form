@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Return Entry</title>
+    <!-- <script type="text/javascript" src="script.js"></script> -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="box">
+        <div>
+            <h2 class="header">MONEY RETURN ENTRY</h2>
+            <p>TNo.</p>
+        </div>
+        <div class="form">
+        <fieldset class="form-field">
+            <label>A/c Type</label>
+            <select>
+                <option selected >Choose......</option>
+                <option value="normal">Normal</option>
+                <option value="current">Current</option>
+                <option value="saving">Saving</option>
+            </select>
+            <!-- <input type="text" name="account-type"  > -->
+            <label>A/c No.</label>
+            <input type="text" name="account-number">
+            <label>Name</label>
+            <input type="text" name="name">
+            <label class="space">Date:  <span id="date-today"></span></label><br>
+            <label>Saving Amount</label>
+            <input type="text" name="amount">
+            <label>Cheque/Slip</label>
+            <input type="number" id ="Cheque">
+            <label>Cheque No.</label>
+            <input type="number" id ="Cheque-number"><br>
+            <label>Withdraw Amount</label>
+            <input class="decimal" type="number" id="decimal" value=".00" >
+            <label>Interest</label>
+            <input class="decimal" type="number" id="interest" value=".00">
+            <label>Tax</label>
+            <input class="decimal" type="number" id="tax" value=".00">
+            <label>Cash/Bank</label>
+            <input type="text" id="cash">
+        </fieldset>
+        <fieldset class="bank-detail">
+            <legend class="legend">Bank </legend>
+            <label>Bank</label>
+            <select>
+                <option selected >Choose......</option>
+                <option value="nrb">Nepal Rastra Bank</option>
+                <option value="nibl">Nepal Investment Bank</option>
+                <option value="prabhu">Prabhu Bank</option>
+                <option value="sanima">Sanima Bank</option>
+                <option value="global">Global IME Bank</option>
+                <option value="nic">NIC Asia Bank</option>
+                <option value="garima">Garima Bank</option>
+           </select>
+            <label>Bank Cheque No.</label>
+            <input type="number" name="Bank-cheque-number">
+            <label>Bank Amount</label>
+            <input type="text" name="Bank-amount">
+           
+        </fieldset>
+        <fieldset class="amount-deposite">
+            <legend class="legend">Amount Deposit </legend>
+            <label>A/c Type</label>
+            <select>
+                <option selected >Choose......</option>
+                <option value="normal">Normal</option>
+                <option value="current">Current</option>
+                <option value="saving">Saving</option>
+            </select>
+            <label>A/c No.</label>
+            <input type="number" name="Depositer-account-number" style="width:30%"><br>
+            <label>Name</label>
+            <input type="text" name="Depositer-name" style="width:30%">
+            <label>Deposit Amount</label>
+            <input class="decimal" type="number" name="Deposite-amount" value=".00" style="width:30%">
+           
+        </fieldset>
+        <fieldset class="description">
+            <label>Description</label>
+            <input type="text" name="Description">
+        </fieldset>
+        </div>
+    </div>
+</body>
+<script>
+    let dateToday = document.getElementById("date-today");
+    let today = new Date();
+    let day  = `${today.getDate() < 10 ? "0" : ""}${today.getDate()}`;
+    let month = `${(today.getMonth()+1) < 10 ? "0" : ""}${today.getMonth()+1}`;
+    let year = today.getFullYear();
+    dateToday.textContent = `${day}-${month}-${year}`;
+</script>
+</html>

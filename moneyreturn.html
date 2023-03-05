@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Return Entry</title>
+    <link rel="stylesheet" href="moneyreturn.css">
+</head>
+<body>
+    <div class="full-box">
+        <div>
+        <h1>Money Return Entry</h1>
+        <p>TNo.</p>
+        </div>
+        <div class="column">
+            
+            
+            <div class="col-1">
+                <ul>
+                    <li>A/c Type</li>
+                    <li>Name</li>
+                    <li>Saving Amt</li>
+                    <li>Cheque No</li>
+                    <li>Interest</li>
+                    <li>Tax</li>
+                </ul>
+            </div>
+            <div class="col-2">
+                <select>
+                    <option selected >Choose......</option>
+                    <option value="normal">Normal</option>
+                    <option value="current">Current</option>
+                    <option value="saving">Saving</option>
+                </select><br>
+                <input type="text" name="name">
+                <input type="text" name="amount">
+                <input type="number" id ="Cheque-number">
+                <input class="decimal" type="number" id="interest" value=".00">
+                <input class="decimal" type="number" id="tax" value=".00">
+            </div>
+        
+        
+            <div class="col-3">
+                <ul>
+                    <li>A/c No</li>
+                    <li>Date</li>
+                    <li>Cheque/Slip</li>
+                    <li>Withdraw Amt</li>
+                    <li>Cash/Bank</li>
+                </ul>  
+            </div>
+            <div class="col-4">
+            <input type="text" name="account-number"><br>
+            <label class="space"><span id="date-today"></span></label><br>
+            <input type="number" id ="Cheque">
+            <input class="decimal" type="number" id="decimal" value=".00" >
+            <input type="text" id="cash">
+            
+            </div>
+       
+        </div>
+        <div>
+        <fieldset class="bank">
+            <legend class="legend">Bank </legend>
+            <label class="bank-label">Bank</label>
+            <select class="bank-select">
+                <option selected >Choose......</option>
+                <option value="nrb">Nepal Rastra Bank</option>
+                <option value="nibl">Nepal Investment Bank</option>
+                <option value="prabhu">Prabhu Bank</option>
+                <option value="sanima">Sanima Bank</option>
+                <option value="global">Global IME Bank</option>
+                <option value="nic">NIC Asia Bank</option>
+                <option value="garima">Garima Bank</option>
+           </select><br>
+           <div class="column bank-cheque">
+            <div class="col-1">
+                <ul>
+                    <li>Bank Cheque No.</li>
+                    
+                </ul>
+            </div>
+            <div class="col-2">
+            <input type="number" name="Bank-cheque-number">         
+            </div>
+            <div class="col-3">
+                <ul>
+                    <li>Bank Amt</li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <input type="text" name="Bank-amount">
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <div>
+        <fieldset class="account-deposite">
+            <legend class="legend">Amount Deposit </legend>
+            
+        <div class="column amount-deposite">
+            <div class="col-1">
+                <ul>
+                    <li>A/c Type</li>
+                    <li>Name</li>
+
+                </ul>  
+            </div>
+            <div class="col-2 amount-deposite">
+                <select>
+                    <option selected >Choose......</option>
+                    <option value="normal">Normal</option>
+                    <option value="current">Current</option>
+                    <option value="saving">Saving</option>
+                </select><br>
+            <input type="text" name="Depositer-name" style="width:30%">
+
+            </div>
+            <div class="col-3">
+                <ul>
+                    <li>A/c No.</li>
+                    <li>Deposite Amt</li>
+
+                </ul>
+            </div>
+            <div class="col-4 amount-deposite">
+            <input type="number" name="Depositer-account-number" ><br>
+            <input class="decimal" type="number" name="Deposite-amount" value=".00">
+            
+            </div>
+        </div>
+        </fieldset>
+    </div>
+    <div>
+        <fieldset class="description">
+            <label>Description</label>
+            <input type="text" name="Description">
+        </fieldset>
+    </div>
+    </div>
+    
+</body>
+<script>
+    let dateToday = document.getElementById("date-today");
+    let today = new Date();
+    let day  = `${today.getDate() < 10 ? "0" : ""}${today.getDate()}`;
+    let month = `${(today.getMonth()+1) < 10 ? "0" : ""}${today.getMonth()+1}`;
+    let year = today.getFullYear();
+    dateToday.textContent = `${day}-${month}-${year}`;
+</script>
+</html>

@@ -1,0 +1,48 @@
+.box{
+    display:flex-inline;
+    width:100%;
+    align-items: center !important;
+    justify-content: center;
+}
+.header{
+    text-align: center;
+}
+.form{
+    line-height:3;
+    justify-content: space-between;
+}
+.form-field{
+    border: none;
+}
+label{
+    padding-right: 2%;
+    
+}
+input{
+    margin-right: 5%;
+}
+.legend{
+    text-align: center;
+    /* background:1px bisque !important; */
+
+}
+.description{
+    border: none;
+    line-height:2 !important;
+}
+.description input{
+    width:80%;
+}
+#bank{
+  width:20%;  
+}
+.space{
+    word-spacing:25% ;
+}
+.decimal{
+    text-align: right;
+}
+select{
+    padding-right: 10%;
+    margin-right:5%;
+}
